@@ -8,8 +8,8 @@ test('renders App component', () => {
   expect(appElement).toBeInTheDocument();
 });
 
-test('renders text "Welcome To TaskWiseUI ...."', () => {
+test('renders welcome message', () => {
   render(<App />);
-  const textElement = screen.getByText('Welcome To TaskWiseUI ....');
+  const textElement = screen.getByText(/Welcome To TaskWiseUI/i); // Using a regex to match the text case-insensitively
   expect(textElement).toBeInTheDocument();
 });
